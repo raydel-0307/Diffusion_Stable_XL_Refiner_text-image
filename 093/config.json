@@ -1,0 +1,9 @@
+{
+	"name_model":"stabilityai/stable-diffusion-xl-refiner-1.0",
+	"settings":{
+		"variant":"fp16",
+		"use_safetensors":true
+	},
+	"prompt":"Pon el caballo de otro color",
+	"image_path":"file.png"
+}
