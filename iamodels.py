@@ -2,6 +2,7 @@ import torch
 from diffusers import StableDiffusionXLImg2ImgPipeline
 from diffusers.utils import load_image
 import pickle
+import os
 
 def TrainModel(ruta,name_model,settings):
 	pipe = StableDiffusionXLImg2ImgPipeline.from_pretrained(
@@ -22,7 +23,7 @@ def MainModel(ruta,prompt,image_path):
 	if not os.path.exists(f"{ruta}/model.pkl"):
 		print("Descargue primeramente el modelo")
 		return
-		
+
 	init_image = load_image(image_path).convert("RGB")
 
 	image = pipe(prompt, image=init_image).images
